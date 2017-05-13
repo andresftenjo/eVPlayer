@@ -1,5 +1,5 @@
-# Crossover Video Portal 
-This is the backend API code that needs to be consumed by front-end applications.
+# Video Portal Web App
+Fullstack Front End application using mongodb and nodejs for backend, for the client side using backbone, underscore and requirejs and implementing mochajs for unit tests
 
 ---
 
