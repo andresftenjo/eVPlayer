@@ -1,0 +1,26 @@
+    <div class="col-xs-12 col-sm-12 col-md-9 video-detail-container">
+        <div class="block-content">    
+            <h4><%= video.name %></h4>
+            <video id="<%= video._id %>" width="100%" height="100%" controls>
+                <source src="<%= video.url %>" type="video/mp4">
+                 Your browser does not support the video tag.
+            </video>
+            <p><%= video.description %></p>
+            <input type="number" name="your_awesome_parameter" id="rating1" class="input-rating rating" value="<%= video.totalRatings %>" data-vidId="<%= video._id %>" />
+        </div> 
+    </div> 
+    <% _.each(landingVids, function(video) { %>
+        <div class="lazy col-xs-12 col-sm-6 col-md-3 video-element">
+            <div class="block-content">    
+                <h5><a href="#video/<%= video._id %>"><%= video.name %></a></h5>
+                <!--<video width="100%" height="100%" controls onplay="myFunction(this);">-->
+                <video id="<%= video._id %>" width="100%" height="100%" controls>
+                  <source src="<%= video.url %>" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p><%= video.description.trunc(100) %></p>
+                <input type="number" name="your_awesome_parameter" id="rating1" class="input-rating rating" value="<%= video.totalRatings %>" data-vidId="<%= video._id %>" />
+            </div> 
+        </div> 
+    <% }); %>
+<script src="js/lib/bootstrap-rating-input.min.js"></script>
